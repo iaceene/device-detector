@@ -1,0 +1,7 @@
+export const db = {
+    TV: "SmartTV Tizen BRAVIA PlayStation Xbox Viera NetTV VIDAA tvOS HbbTV NETTV FreeCast Vewd TiVo GoogleTV webOS Web0S AFTT AFTM AFTB AFTS AFTN AFTSO Kylo Roku Chromecast CrKey Freebox Espial CE-HTML Maple Aquos Vizio Hisense Panasonic Philips Skyworth Konka Changhong SmartCast",
+    MOBILE: "Android iPhone Mobile Mobi Phone SM-G SM-A SM-J SM-M SM-N SM-S GT-I GT-N GT-S SHV SCV SCG SCL BlackBerry BB10 IEMobile Nokia6 Nokia7 Nokia8 Nokia9 Lumia Nexus Pixel Redmi POCO Mi Mix Honor OPPO Vivo iQOO OnePlus Nord Realme Xperia Moto Droid RIM Wiko Wileyfox BLU Coolpad Cubot Doogee Elephone Leagoo Oukitel Ulefone Umidigi Vernee Blackview AGM Caterpillar Infinix Tecno Meizu Gionee Micromax Zenfone Alcatel Symbian S60 SymbianOS PalmOS Bada MeeGo Maemo SonyEricsson",
+    TABLET: "iPad Tablet SM-T SM-P SM-X GT-P KFAPWI KFARWI KFASWI KFFOWI KFGIWI KFMAWI KFOT KFSAWI KFTBWI KFTHWA KFTHWI KFKAWI KFONWI KFMEWI KFSUWI KFTRWI PlayBook Xoom Transformer PadFone MediaPad MatePad MiPad Nexus Slate TabletPC",
+    Desktop: "Windows Macintosh Win64 WOW64 Win32 X11 CrOS Ubuntu Fedora Debian openSUSE Manjaro Arch FreeBSD OpenBSD NetBSD SunOS Solaris PC"
+};
+//# sourceMappingURL=db.js.map

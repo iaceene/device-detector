@@ -1,0 +1,47 @@
+{
+  "name": "device-detector",
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript utility that detects the device type from a user agent string and returns \"mobile\", \"tablet\", \"desktop\", or \"tv\".",
+  "keywords": [
+    "device",
+    "device-detector",
+    "device-type",
+    "user-agent",
+    "ua",
+    "mobile",
+    "tablet",
+    "desktop",
+    "tv",
+    "responsive",
+    "typescript",
+    "nodejs",
+    "browser",
+    "ssr",
+    "nextjs",
+    "lightweight",
+    "zero-dependency"
+  ],
+  "license": "ISC",
+  "author": "iaceene",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iaceene/device-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iaceene/device-detector/issues"
+  },
+  "homepage": "https://github.com/iaceene/device-detector#readme",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
