@@ -1,6 +1,6 @@
 {
   "name": "@iaceene/device-detector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight TypeScript utility that detects the device type from a user agent string and returns \"mobile\", \"tablet\", \"desktop\", or \"tv\".",
   "keywords": [
     "device",
