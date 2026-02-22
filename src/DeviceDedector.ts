@@ -1,8 +1,8 @@
 import { db } from "./db.js"
 
-type DeviceType = "mobile" | "desktop" | "tablet" | "TV" | "ROBOT" | "other"
+export type DeviceType = "mobile" | "desktop" | "tablet" | "TV" | "ROBOT" | "other"
 
-type MetaData = {
+export type MetaData = {
     UserAgent: string,
     Platform: string,
     Language: string,
@@ -27,6 +27,7 @@ export default class DeviceDedector{
 
     private Parse(): DeviceType{
         const product: string | undefined = this.device.Product.split(';')[0]?.toLocaleLowerCase()
+        const fullProduct: string = this.device.Product.toLowerCase();
         // Macintosh; Intel Mac OS X 10_15_7
         // desktop
         // Windows NT 6.1; Win64; x64; rv:47.0
@@ -34,14 +35,24 @@ export default class DeviceDedector{
         // Linux; Android 10; K
         // android device
         /// ...
-
+        
         if (product == undefined)
             return ("ROBOT")
-        if (db.TV.split(' ').some(keyword => product.includes(keyword.toLowerCase())))
+        
+        // Check for Android first (appears after "Linux;" in product string)
+        if (fullProduct.includes('android')) {
+            // Check if it's an Android tablet
+            if (db.TABLET.split(' ').some(keyword => fullProduct.includes(keyword.toLowerCase())))
+                return ("tablet");
+            // Otherwise it's a mobile device
+            return ("mobile");
+        }
+        
+        if (db.TV.split(' ').some(keyword => fullProduct.includes(keyword.toLowerCase())))
             return ("TV");
-        else if (db.TABLET.split(' ').some(keyword => product.includes(keyword.toLowerCase())))
+        else if (db.TABLET.split(' ').some(keyword => fullProduct.includes(keyword.toLowerCase())))
             return ("tablet");
-        else if (db.MOBILE.split(' ').some(keyword => product.includes(keyword.toLowerCase())))
+        else if (db.MOBILE.split(' ').some(keyword => fullProduct.includes(keyword.toLowerCase())))
             return ("mobile");
         else if (db.Desktop.split(' ').some(keyword => product.includes(keyword.toLowerCase())))
             return ("desktop");

@@ -1,0 +1,32 @@
+# Source files
+src/
+
+# Configuration files
+tsconfig.json
+.gitignore
+.git/
+
+# Documentation (README is included by default)
+# README.md is automatically included
+CONTRIBUTING.md
+CHANGELOG.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/

@@ -1,5 +1,5 @@
-type DeviceType = "mobile" | "desktop" | "tablet" | "TV" | "ROBOT" | "other";
-type MetaData = {
+export type DeviceType = "mobile" | "desktop" | "tablet" | "TV" | "ROBOT" | "other";
+export type MetaData = {
     UserAgent: string;
     Platform: string;
     Language: string;
@@ -19,5 +19,4 @@ export default class DeviceDedector {
     Platform(): string;
     Product(): string;
 }
-export {};
 //# sourceMappingURL=DeviceDedector.d.ts.map
