@@ -2,7 +2,7 @@
 
 A lightweight, zero-dependency TypeScript utility that detects device types from user agent strings. Perfect for responsive applications, SSR frameworks, and browser-based device detection.
 
-[![npm version](https://img.shields.io/npm/v/device-detector.svg)](https://www.npmjs.com/package/device-detector)
+[![npm version](https://img.shields.io/npm/v/@iaceene/device-detector.svg)](https://www.npmjs.com/package/@iaceene/device-detector)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Features
@@ -17,15 +17,15 @@ A lightweight, zero-dependency TypeScript utility that detects device types from
 ## Installation
 
 ```bash
-npm install device-detector
+npm install @iaceene/device-detector
 ```
 
 ```bash
-yarn add device-detector
+yarn add @iaceene/device-detector
 ```
 
 ```bash
-pnpm add device-detector
+pnpm add @iaceene/device-detector
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ pnpm add device-detector
 ### Basic Usage
 
 ```typescript
-import DeviceDetector from 'device-detector';
+import DeviceDetector from '@iaceene/device-detector';
 
 const detector = new DeviceDetector();
 
@@ -46,7 +46,7 @@ console.log(`Device type: ${deviceType}`);
 ### Get All Metadata
 
 ```typescript
-import DeviceDetector from 'device-detector';
+import DeviceDetector from '@iaceene/device-detector';
 
 const detector = new DeviceDetector();
 
@@ -65,7 +65,7 @@ console.log(metadata);
 ### Individual Property Access
 
 ```typescript
-import DeviceDetector from 'device-detector';
+import DeviceDetector from '@iaceene/device-detector';
 
 const detector = new DeviceDetector();
 
@@ -86,7 +86,7 @@ console.log(`Product: ${product}`);
 ### Conditional Rendering Example
 
 ```typescript
-import DeviceDetector from 'device-detector';
+import DeviceDetector from '@iaceene/device-detector';
 
 const detector = new DeviceDetector();
 const deviceType = detector.Type();
@@ -227,7 +227,7 @@ Works in all modern browsers that support the Navigator API:
 Full TypeScript support with exported types:
 
 ```typescript
-import DeviceDetector, { DeviceType, MetaData } from 'device-detector';
+import DeviceDetector, { DeviceType, MetaData } from '@iaceene/device-detector';
 
 const detector: DeviceDetector = new DeviceDetector();
 const type: DeviceType = detector.Type();
@@ -251,7 +251,7 @@ Create a test file at `test/DeviceDetector.test.ts`:
 ```typescript
 import { describe, it, expect } from 'vitest';
 import { Window } from 'happy-dom';
-import DeviceDetector from '../src/index.js';
+import DeviceDetector from '@iaceene/device-detector';
 
 // Mock navigator for testing
 function createMockNavigator(userAgent: string) {

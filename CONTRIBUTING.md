@@ -114,7 +114,7 @@ Create your tests in a `test/` directory:
 // test/DeviceDetector.test.ts
 import { describe, it, expect } from 'vitest';
 import { Window } from 'happy-dom';
-import DeviceDetector from '../src/index.js';
+import DeviceDetector from '@iaceene/device-detector';
 
 function createMockNavigator(userAgent: string, platform = 'MacIntel') {
   const window = new Window();
@@ -216,7 +216,7 @@ You can also test manually in a browser:
    <body>
        <h1>Device Type: <span id="device-type"></span></h1>
        <script type="module">
-           import DeviceDetector from './dist/index.js';
+           import DeviceDetector from '@iaceene/device-detector';
            const detector = new DeviceDetector();
            document.getElementById('device-type').textContent = detector.Type();
        </script>
